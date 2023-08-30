@@ -1,0 +1,259 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    background: rgb(148, 155, 233);
+    background: linear-gradient( 90deg, rgba(148, 155, 233, 1) 16%, rgba(221, 41, 120, 1) 90%);
+    background-position: fix;
+    color: #f5f5dc;
+}
+
+.container {
+    position: relative;
+    width: auto;
+    background: rgb(221, 41, 120);
+    background: linear-gradient( 90deg, rgba(221, 41, 120, 1) 27%, rgba(148, 155, 233, 1) 57%);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px;
+    display: flex;
+}
+
+.form-info {
+    width: 20em;
+    height: auto;
+    border: none;
+    display: grid;
+    grid-template-rows: 5em 5em 2em 2em 2em;
+    gap: 0.5em;
+}
+
+.form-info h1 {
+    padding: 1em;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.form-info span {
+    padding: 1em;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.Icons-info {
+    padding-inline: 1em;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.icons {
+    padding-inline: 1em;
+}
+
+.SocMed {
+    display: flex;
+    padding: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.socmed-Icon1 {
+    font-size: 20px;
+    color: #f5f5dc;
+    text-decoration: none;
+}
+
+.socmed-Icon2 {
+    font-size: 20px;
+    color: #f5f5dc;
+    text-decoration: none;
+}
+
+.socmed-Icon3 {
+    font-size: 20px;
+    color: #f5f5dc;
+    text-decoration: none;
+}
+
+.socmed-Icon1:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.socmed-Icon2:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.socmed-Icon3:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.form-box {
+    width: 30em;
+    height: auto;
+    margin: 1em;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.info-box {
+    position: relative;
+    height: 2em;
+    width: 12em;
+    margin: 3em 0 0 2em;
+    display: grid;
+    align-items: center;
+    border-bottom: 2px solid #f5f5dc;
+}
+
+.input-box {
+    position: relative;
+    border: none;
+    padding: 0.4em;
+    background: none;
+    color: #f5f5dc;
+    z-index: 1;
+}
+
+.form-label {
+    position: absolute;
+    font-size: 0.8em;
+    font-weight: 500;
+    font-size: 0.8rem;
+    top: 12px;
+    transition: top 0.3s, font-size 0.3s;
+}
+
+.input-box:focus+.form-label {
+    top: -18px;
+    font-size: 0.7em;
+}
+
+.input-box:not(:placeholder-shown).input-box:not(:focus)+.form-label {
+    top: -18px;
+    font-size: 0.7em;
+}
+
+.Msg-box {
+    width: auto;
+    margin: 1em;
+    display: grid;
+    grid-column: span 2;
+}
+
+.msg-input {
+    border-radius: 10px;
+    border: 2px solid #f5f5dc;
+    padding: 1em;
+    background: none;
+    color: #f5f5dc;
+}
+
+.msg-input::placeholder {
+    color: #f5f5dc;
+}
+
+.form-btn {
+    width: 10em;
+    margin: 1em;
+    padding: 0.8em;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    color: #f5f5dc;
+    background: #dd2978;
+    box-shadow: 2px 2px 3px;
+    cursor: pointer;
+}
+
+.form-btn:hover {
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 770px) {
+    .container {
+        position: relative;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    .form-box {
+        width: auto;
+        height: auto;
+        gap: 1 em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .info-box {
+        height: 2em;
+        width: 12em;
+        margin: 1em;
+        display: grid;
+        align-items: center;
+        border-bottom: 2px solid #f5f5dc;
+    }
+    .form-info {
+        width: auto;
+        height: 25em;
+    }
+    .form-btn {
+        width: auto;
+        margin: 2em;
+        padding: 0.5em;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        position: relative;
+        width: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .form-box {
+        width: auto;
+        height: auto;
+        gap: 1 em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .info-box {
+        height: 2em;
+        width: 12em;
+        margin: 1em;
+        display: grid;
+        align-items: center;
+        border-bottom: 2px solid #f5f5dc;
+    }
+    .form-info {
+        width: auto;
+        height: 25em;
+    }
+    .form-btn {
+        width: auto;
+        margin: 2em;
+        padding: 0.5em;
+        font-weight: 600;
+    }
+}
